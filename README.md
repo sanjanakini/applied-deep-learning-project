@@ -1,25 +1,38 @@
 # Deep Learning Mini Project
 
-This project demonstrates **applied deep learning models** including CNN, RNN/LSTM/GRU, and GAN using **PyTorch**.  
-It is structured to show basic implementation, training, evaluation, and visualization of results.
+## Overview
+This project demonstrates the application of deep learning models using PyTorch, including:
+- Convolutional Neural Networks (CNN)
+- Recurrent Neural Networks (RNN, LSTM, GRU)
+- Generative Adversarial Networks (GAN)
+
+The project covers model implementation, training, evaluation, and visualization of results.
+
+---
 
 ## Project Structure
 deep-learning-mini-project/
+│
 ├── cnn/
-│ ├── simple_cnn.py
-│ ├── transfer_model.py
-│ ├── train_cnn.py
+│   ├── simple_cnn.py
+│   ├── transfer_model.py
+│   ├── train_cnn.py
+│
 ├── rnn/
-│ ├── rnn_models.py
-│ ├── train_rnn.py
+│   ├── rnn_models.py
+│   ├── train_rnn.py
+│
 ├── gan/
-│ ├── gan_model.py
-│ ├── train_gan.py
+│   ├── gan_model.py
+│   ├── train_gan.py
+│
 ├── outputs/
-│ ├── plots/
-│ ├── generated_images/
+│   ├── plots/
+│   ├── generated_images/
+│
 ├── utils/
-│ ├── helper.py
+│   ├── helper.py
+│
 ├── requirements.txt
 └── README.md
 
@@ -31,71 +44,92 @@ deep-learning-mini-project/
 git clone <your_repo_url>
 cd deep-learning-mini-project
 
-2.Create a virtual environment (optional but recommended):
+2. Create a virtual environment (optional):
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
 
-3.Install required packages:
+Activate environment:
+Linux/macOS:
+source venv/bin/activate
+
+Windows:
+venv\Scripts\activate
+
+3. Install dependencies:
 pip install -r requirements.txt
 
-4.Make sure outputs/plots and outputs/generated_images exist (they will be created automatically if not)
+4. Output directories (auto-created if not present):
+- outputs/plots
+- outputs/generated_images
 
-**Running the Project**
-1) CNN (Image Classification)
+---
 
-Train and evaluate CNN / Transfer Learning models:
+## Running the Project
 
+### 1. CNN – Image Classification
 python cnn/train_cnn.py
-Uses CIFAR-10 dataset
-Includes simple CNN and ResNet18 transfer learning
+
+Details:
+- Dataset: CIFAR-10
+- Models: Simple CNN, ResNet18 (Transfer Learning)
+
 Outputs:
-Training loss curve (outputs/plots/resnet_loss.png)
-Confusion matrix (outputs/plots/cnn_confusion_matrix.png)
+- Training loss curve → outputs/plots/resnet_loss.png
+- Confusion matrix → outputs/plots/cnn_confusion_matrix.png
 
-2️) RNN / LSTM / GRU (Text Classification)
+---
 
-Train and evaluate RNN-based models:
-
+### 2. RNN / LSTM / GRU – Text Classification
 python rnn/train_rnn.py
-Uses IMDB movie review dataset (binary sentiment classification)
-Compares RNN, LSTM, and GRU
+
+Details:
+- Dataset: IMDB Movie Reviews
+- Task: Binary Sentiment Classification
+- Models: RNN, LSTM, GRU
+
 Outputs:
-Training loss curves (outputs/plots/RNNModel_loss.png, etc.)
-Test accuracy printed in console
+- Loss curves → outputs/plots/
+- Test accuracy printed in console
 
-3️) GAN (Image Generation)
+---
 
-Train GAN to generate Fashion-MNIST images:
-
+### 3. GAN – Image Generation
 python gan/train_gan.py
-Uses Generator and Discriminator from gan_model.py
-Saves generated images every few epochs to outputs/generated_images/
+
+Details:
+- Dataset: Fashion-MNIST
+- Components: Generator and Discriminator
+
 Outputs:
-Generated image samples
-Training loss curves for generator and discriminator
+- Generated images → outputs/generated_images/
+- Training loss curves
 
-**Utilities:**
+---
 
-All helper functions like plotting loss, saving images, computing accuracy, and confusion matrix are in:
+## Utilities
+utils/helper.py includes:
+- Loss plotting
+- Accuracy calculation
+- Confusion matrix
+- Image saving
 
-utils/helper.py
+---
 
-Notes / Observations:
-Simple CNN performs reasonably on CIFAR-10; ResNet18 transfer learning improves accuracy significantly.
-LSTM and GRU converge faster and give better accuracy than vanilla RNN on IMDB dataset.
-GAN generates Fashion-MNIST images gradually; can show mode collapse if training too short.
-Small subsets of datasets are used for faster experimentation, can expand for full training.
+## Observations
+- Simple CNN performs reasonably well on CIFAR-10
+- ResNet18 improves accuracy significantly using transfer learning
+- LSTM and GRU outperform vanilla RNN
+- GAN improves gradually but may show mode collapse if undertrained
 
-Requirements:
-Python 3.9+
-PyTorch
-torchvision
-torchtext
-matplotlib
-seaborn
-numpy
+---
 
-Install all dependencies with:
+## Requirements
+- Python 3.9+
+- PyTorch
+- torchvision
+- torchtext
+- matplotlib
+- seaborn
+- numpy
 
+Install using:
 pip install -r requirements.txt
