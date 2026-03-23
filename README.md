@@ -11,31 +11,24 @@ The project covers model implementation, training, evaluation, and visualization
 ---
 
 ## Project Structure
-deep-learning-mini-project/
-│
-├── cnn/
-│   ├── simple_cnn.py
-│   ├── transfer_model.py
-│   ├── train_cnn.py
-│
-├── rnn/
-│   ├── rnn_models.py
-│   ├── train_rnn.py
-│
-├── gan/
-│   ├── gan_model.py
-│   ├── train_gan.py
-│
-├── outputs/
-│   ├── plots/
-│   ├── generated_images/
-│
-├── utils/
-│   ├── helper.py
-│
-├── requirements.txt
-└── README.md
-
+deep-learning-mini-project
+- cnn
+  - simple_cnn.py
+  - transfer_model.py
+  - train_cnn.py
+- rnn
+  - rnn_models.py
+  - train_rnn.py
+- gan
+  - gan_model.py
+  - train_gan.py
+- outputs
+  - plots
+  - generated_images
+- utils
+  - helper.py
+- requirements.txt
+- README.md
 ---
 
 ## Setup Instructions
